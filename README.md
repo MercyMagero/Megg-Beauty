@@ -1,5 +1,7 @@
 # Megg-Beauty
-An Online Service booking Website Integrated with CRM and MPESA Express STK push.
+
+An ![Capture](https://github.com/MercyMagero/Megg-Beauty/assets/167980212/18207962-e697-48b9-a310-013ee938ae69)
+Online Service booking Website Integrated with CRM and MPESA Express STK push.
 **Front-End Technologies**
 1. HTML, CSS and JavaScript
 2. Bootstrap.
@@ -9,4 +11,4 @@ An Online Service booking Website Integrated with CRM and MPESA Express STK push
 2. Express
 3. MySQL
 4. Ngrok
-   ![megg home](https://github.com/MercyMagero/Megg-Beauty/assets/167980212/8d82b6f5-b742-49ca-808d-3fb6aaceab35)
+
