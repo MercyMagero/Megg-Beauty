@@ -1,0 +1,1016 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Megg Beauty - Spa & Lounge</title>
+    <meta name="title" content="Megg Beauty - Spa & Lounge">
+    <meta name="decription" content="The Best Beauty Spa and Lounge in Kenya">
+ 
+    <!--
+        Favicon
+    -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+     
+    <!--
+        Google fonts link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=forum&display=Swap" rel="stylesheet" >
+
+    <!--
+        Custom CSS links
+    -->
+    <link rel="stylesheet" href="/assets/css/test.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    
+    <!--
+        Preload Images
+    -->
+    <link rel="preload" as="image" href="assets/images/homeSlider1.jpeg">
+    <link rel="preload" as="image" href="assets/images/homeSlider2.jpeg">
+    <link rel="preload" as="image" href="assets/images/homeSlider3.jpeg">
+
+</head>
+<body id="top" class="showCart" > 
+    <!--
+        #PRELOADER
+    -->
+    <div class="preload" data-preaload>
+        <div class="circle"></div>
+        <p class="text">Megg</p>
+    </div>
+    
+    <!--
+        - #TOPBAR
+    -->
+    <div class="topbar">
+        <div class="container">
+
+            <address class="topbar-item">
+                <div class="icon">
+                    <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <span class="span">
+                    Beauty Spa & Lounge, Westlands, Nairobi City, Kenya.
+                </span>
+            </address>
+
+            <div class="separator"></div>
+
+            <div class="topbar-item item-2">
+                <div class="icon">
+                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <span class="span">Daily : 8:00am to 10:00pm</span>
+            </div>
+
+            <a href="/login" class="topbar-item link">
+                <div class="icon">
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+                <%if (status == "loggedIn" ){%>
+                    <span class="span"><%= user.email %></span>
+                <%}else{%>
+                    <span class="span">Account</span>
+                <%}%>
+                
+            </a>
+
+            <div class="separator"></div>
+
+            <a href="#" class="topbar-item link">
+                <div class="icon">
+                    <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <span class="span">+254 748 959 672</span>
+            </a>
+
+            <div class="separator"></div>
+            <% if (status == "loggedIn" ) {%> 
+                <a href="mailto:+254748959672" class="topbar-item link">
+                    <div class="icon">
+                        <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                    </div>
+                    <span class="span">meggbeauty.co.ke</span>
+                </a>
+                <div class="separator"></div>
+                <a href="/logout" class="topbar-item link">
+                    <span class="span">Log Out</span>
+                </a>
+            <%}else{%>
+                <a href="mailto:+254748959672" class="topbar-item link">
+                    <div class="icon">
+                        <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                    </div>
+                    <span class="span">meggbeauty.co.ke</span>
+                </a>
+            <%}%>
+        </div>
+    </div>
+
+
+
+    <!--
+        - #HEADER
+    -->
+
+    <header class="header" data-header>
+        <div class="container">
+
+            <a href="#" class="logo">
+                <img src="assets/images/logoo.png" width="100px" height="100px" alt="Megg - Home">
+            </a>
+
+            <nav class="navbar " data-navbar>
+                <button class="close-btn" aria-label="close menu" data-nav-toggler>
+                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </button>
+
+                <a href="#" class="logo">
+                    <img src="assets/images/logoo.png" width="100px" height="100px" alt="Megg - Home">
+                </a>
+
+                <ul class="navbar-list">
+
+                    <li class="navbar-item">
+                        <a href="pages/services.ejs" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+
+                            <span class="span">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+
+                            <span class="span">Products</span>
+                        </a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="pages/services" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+
+                            <span class="span">Services</span>
+                        </a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#AboutUs" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+
+                            <span class="span">About Us</span>
+                        </a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="/adminlogin" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+
+                            <span class="span">ADMIN</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="text-center">
+                    <p class="headline-1 navbar-tittle">Visit Us</p>
+
+                    <address class="body-4">
+                        Beauty Spa & Lounge, Nairobi City, <br> 
+                        Karen, Kenya
+                    </address>
+
+                    <p class="body-4" navbar-text> Open: 8:00am - 7.00pm</p>
+
+                    <a href="mailto:booking@meggbeauty.com" class="body-4 sidebar-link">booking@megg.com</a>
+
+                    <div class="separator"></div>
+
+                    <p class="contact-label">Booking Request</p>
+
+                    <a href="tel:+254-748-959-672" class="body-1 contact-number hover-underline">+254-748-959-672</a>
+                </div>
+
+            </nav>
+
+            <a href="#" >
+                <span class="text text-2 icons-new" aria-hidden="true"><i class='bx bx-search-alt-2' style='color:#ffffff' ></i></span>
+            </a>
+
+            <div class="cart-icon"> 
+                <span class="text text-2 icons-new" aria-hidden="true"><i class='bx bx-shopping-bag'></i></span>
+                <span class="cart-quantity" id="count" style="font-size: 14px;">0</span>         
+            </div>
+
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </button>
+
+            <div class="overlay" data-nav-toggler data-overlay></div>
+
+        </div>
+
+        <!--Responsive Shopping cart-->
+
+        <div class="shopping-list ">
+            <div class="cart-header">
+                <h1>Shopping Cart</h1>
+                <span class="close-cart">
+                   <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </span>
+            </div>
+            
+            <div id="list-items">
+                Your Cart Is Empty
+            </div>
+            
+            <div class="total-price">
+                <div class="subtotal">
+                    <h4>Total</h4>
+                    <span id="total">0.00</span>
+                </div>
+            </div>
+            <div>
+                <a href="/checkout">
+                    <button class="checkout-btn" type="submit">Checkout</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article>
+
+            <!--
+                -#SLIDER
+            -->
+
+            <section class="hero text-center" aria-label="home" id="home">
+                <ul class="hero-slider" data-hero-slider>
+                    <li class="slider-item active" data-hero-slider-item>
+                        <div class="slider-bg">
+                            <img src="assets/images/Braids1.jpg" alt="" width="1880" height="950" class="img-cover">
+                        </div>
+
+                        <p class="label-2 section-subtitle slider-reveal">Too glam to give a damn</p>
+
+                        <h1 class="display-1 hero-title slider-reveal">Your hair says alot about you, <br>
+                        Make sure it tells the right story 
+                        </h1>
+
+                        <p class="body-2 hero-text slider-reveal">
+                            Great hair doesnt happen by chance,.. It happens by appointment.
+                        </p>
+
+                        <a href="#" class="btn btn-primary slider-reveal">
+                            <span class="text text-1">View our Services</span>
+
+                            <span class="text text-2" aria-hidden="true">View our Services</span>
+                        </a>
+
+                    </li>
+
+                    <li class="slider-item" data-hero-slider-item>
+                        <div class="slider-bg">
+                            <img src="assets/images/massage2.jpg" alt="" width="1880" height="950" class="img-cover">
+                        </div>
+
+                        <p class="label-2 section-subtitle slider-reveal">Skilled hands give you a whole new body</p>
+
+                        <h1 class="display-1 hero-title slider-reveal">Relaxation of the body and mind are keys for self-realization.
+                        </h1>
+
+                        <p class="body-2 hero-text slider-reveal">
+                            Massage when your body needs a hug.
+                        </p>
+
+                        <a href="#" class="btn btn-primary slider-reveal">
+                            <span class="text text-1">View our offers</span>
+
+                            <span class="text text-2" aria-hidden="true">View our offers</span>
+                        </a>
+
+                    </li>
+
+                    <li class="slider-item" data-hero-slider-item>
+                        <div class="slider-bg">
+                            <img src="assets/images/rename.jpg" alt="" width="1880" height="950" class="img-cover">
+                        </div>
+
+                        <p class="label-2 section-subtitle slider-reveal">Skincare is essential, Makeup is a choice.</p>
+
+                        <h1 class="display-1 hero-title slider-reveal">Did you know? Your skin is constantly replacing itself,<br>
+                             so it is never too late to start a healthy skincare routine.
+                        </h1>
+
+                        <p class="body-2 hero-text slider-reveal">
+                            You glow girl.
+                        </p>
+
+                        <a href="#" class="btn btn-primary slider-reveal">
+                            <span class="text text-1">View our offers</span>
+
+                            <span class="text text-2" aria-hidden="true">View our offers</span>
+                        </a>
+
+                    </li>
+                    <li class="slider-item active" data-hero-slider-item>
+                        <div class="slider-bg">
+                            <img src="assets/images/massage1.jpeg" alt="" width="1880" height="950" class="img-cover">
+                        </div>
+
+                        <p class="label-2 section-subtitle slider-reveal">A massage perfectt for you</p>
+
+                        <h1 class="display-1 hero-title slider-reveal"> Massage therapy – the original mood enhancer.
+                            <br>
+
+                        </h1>
+
+                        <p class="body-2 hero-text slider-reveal">
+                            Stress, headache, anxiety, toxins, pain, depression, muscle aches. Let it all go with massage
+                        </p>
+
+                        <a href="#" class="btn btn-primary slider-reveal">
+                            <span class="text text-1">View our Services</span>
+
+                            <span class="text text-2" aria-hidden="true">View our Services</span>
+                        </a>
+
+                    </li>
+                </ul>
+
+                <button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>
+                    <ion-icon name="chevron-back"></ion-icon>
+                </button>
+
+                <button class="slider-btn next" aria-label="slide to next" data-next-btn>
+                    <ion-icon name="chevron-forward"></ion-icon>
+                </button>
+
+                <a href="#" class="hero-btn has-after">
+                    <img src="assets/images/bookingicon.png" width="48" height="48" alt="booking icon">
+
+                    <span class="label-2 text-center span">Book a Service</span>
+                </a>
+
+            </section>
+
+
+            <!--
+                -# MEGG SERVICES
+            -->
+
+            <section class="section menu bg-black-10" aria-label="menu-label" id="menu">
+                <div class="container">
+
+                    <p class="section-subtitle text-center label-2">Special Selection</p>
+
+                    <h2 class="headline-1 section-title text-center">Our Services</h2>
+
+                    <div class="product-list">
+                        <div id="root">
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!--
+                - #ABOUT
+            -->
+
+            <section class="section about text-center" aria-labelledby="about-label" id="about">
+                <div class="container">
+                    <div class="about-content">
+                        <p class="label-2 section-subtitle" id="about-label">Our Story</p>
+
+                        <h2 class="headline-1 section-title"> About Megg Beauty</h2>
+
+                        <p class="section-text">
+                            Megg Beauty, a famous beauty parlor in Nairobi Kenya, was first established in the 
+                            year 2021, by Achieng' Mageroh. It was first located in Thika town, Megg beauty grew 
+                            and now has several branches within the continent. All our hairdressers, Massage therapists and nail technicians are
+                            certified professionals. Our services can be accessed from our branches across East Africa and Western Africa; Nairobi, Mombasa, and Nakuru in Kenya
+                            Lagos in Nigeria. Dar es Salaam in Tanzania, Johannesburg in South Africa.
+                        </p>
+
+                        <div class="contact-label"> Book Through Call</div>
+
+                        <a href="tel:+254748959672" class="body-1 contact-number hover-underline"> +2547 4895 9672</a>
+
+                        <a href="#" class="btn btn-primary">
+                            <span class="text text-1">Read More</span>
+
+                            <span class="text text-2" aria-hidden="true" >Read More</span>
+                        </a>
+
+
+
+
+                    </div>
+
+                    <figure class="about-banner">
+
+                        <img src="assets/images/pic2.jpeg" width="570" height="570" loading="lazy" alt="about-banner" class="w-100" data-parallax-item data-parallax-speed="1">
+
+                        <div class="abs-img abs-img-1 has-before" data-parallax-item  data-parallax-speed="1.75">
+                            <img src="assets/images/braidal3.jpeg" width="285" height="285" loading="lazy" alt="about-banner" class="w-100">
+                        </div>
+
+                        <div class="abs-img abs-img-2 has-before">
+                            <img src="assets/images/Since.png" width="133" height="134" loading="lazy">
+                        </div>
+
+                    </figure>
+
+
+                    <img src="assets/images/pic2.jpeg" width="197" height="194" loading="lazy" alt="" class="shape">
+
+                </div>
+
+            </section>
+
+            <!--
+                - # TRENDY STYLES
+            -->
+
+            <section class="trendy-styles text-center" aria-labelledby="dish-label">
+                <div class="trendy-styles-banner">
+                    <img src="assets/images/prd1.webp" width="940" height="900" loading="lazy"  alt="Trendy Styles" class="img-cover">
+                </div>
+
+                <div class="trendy-styles-content bg-black-10">
+                    <div class="container">
+
+                        <img src="assets/images/badge.png" width="28" height="41" loading="lazy" alt="badge" class="abs-img">
+
+                        <p class="section-subtitle label-2">Trendy Syles</p>
+
+                        <h2 class="headline-1 section-title"> Fulani Braids</h2>
+
+                        <p class="section-text">
+                            Fulani Braids is top 3 of the most trending hairstyles in both 2022 and 2023. Fulani braids is stylish for all occations from weddinds, 
+                            graduation ceremonies, Gala parties. Its also a protective hairstyle for the hairline. Fulani braids is suitable for all head shapes.
+                            Our hairdressers from all over our branches are well equiped, to give you the best feeling. welcome.
+                        </p>
+
+                        <div class="wrapper">
+                            <del class="del body-3">Ksh 1400.00</del>
+
+                            <span class="span body-1">Ksh 1200.00</span>
+                        </div>
+
+                        <a href="#" class="btn btn-primary">
+                            <span class="text text-1">Check Our Offers</span>
+
+                            <span class="text text-2" aria-hidden="true">Check Our Offers</span>
+                        </a>
+                    </div>
+                </div>
+
+                <img src="./assets/images/shape" width="179" height="359" loading="lazy" class="shape shape-1" >
+
+                <img src="./assets/images/shape" width="351" height="462" loading="lazy" class="shape shape-1" >
+            </section>
+
+
+
+            <!--
+                -# TESTIMONIALS
+            -->
+
+            <section class="section testi text-center has-bg-image" style="background-image: url('assets/images/flower.jpg')" aria-label="testimonials">
+            <div class="container">
+                <div class="quote">"</div>
+                <p class="headline-2 testi-text">
+                    I’d gone to so many hairdressers before that I was hesitant to try someone else. 
+                    However, after receiving a recommendation, I visited this hairdresser and was not disappointed. 
+                    It was great to have someone truly listen to what I wanted in a cut and color.
+                </p>
+
+                <div class="wrapper">
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                </div>
+
+                <div class="profile">
+                    <img src="assets/images/butterflylocs.jpeg" width="100" height="100" loading="lazy" alt="Winnie Rufiji" class="img">
+
+                    <p class="label-2 profile-name">Winnie Rufiji</p>
+                </div>
+            
+            </div>
+            </section>
+
+
+            <!--
+                -# RESERVATION
+            -->
+
+            <section class="reservation">
+                <div class="container">
+
+                    <div class="form reservation-form bg-black-10">
+
+                        <form action="" class="form-left">
+
+                            <h2 class="headline-1 text-center">Online Reservation</h2>
+
+                            <p class="form-text text-center">
+                                Booking request <a href="tel:+254748959672" class="link">+254748959672</a>or fill out the order form
+                            </p>
+
+                            <div class="input-wrapper">
+                                <input type="text" name="name" placeholder="Your Name" autocomplete="off" class="input-field">
+
+                                <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off" class="input-field">
+                            </div>
+
+                            <div class="input-wrapper">
+                                <div class="icon-wrapper">
+                                    <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+    
+                                    <select name="person" class="input-field">
+                                        <option value="1-person">1 Person</option>
+                                        <option value="2-person">2 Person</option>
+                                        <option value="3-person">3 Person</option>
+                                        <option value="4-person">4 Person</option>
+                                        <option value="5-person">5 Person</option>
+                                        <option value="6-person">6 Person</option>
+                                        <option value="7-person">7 Person</option>
+                                        <option value="8-person">8 Person</option>
+                                        <option value="9-person">9 Person</option>
+                                        <option value="10-person">10 Person</option>
+                                    </select>
+    
+                                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                                </div>
+    
+                                <div class="icon-wrapper">
+                                    <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
+    
+                                    <input type="date" name="reservation-date" class="input-field">
+    
+                                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                                </div>
+    
+                                <div class="icon-wrapper">
+                                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+    
+                                    <select name="person" class="input-field">
+                                        <option value="07:00am">07 : 00 am</option>
+                                        <option value="08:00am">08 : 00 am</option>
+                                        <option value="09:00am">09 : 00 am</option>
+                                        <option value="10:00am">10 : 00 am</option>
+                                        <option value="11:00am">11 : 00 am</option>
+                                        <option value="12:00am">12 : 00 noon</option>
+                                        <option value="01:00pm">01 : 00 pm</option>
+                                        <option value="02:00pm">02 : 00 pm</option>
+                                        <option value="03:00pm">03 : 00 pm</option>
+                                        <option value="04:00pm">04 : 00 pm</option>
+                                        <option value="05:00pm">05 : 00 pm</option>
+                                        <option value="06:00pm">06 : 00 pm</option>
+                                        <option value="07:00pm">07 : 00 pm</option>
+                                    </select>
+    
+                                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                                </div>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <div class="icon-wrapper">
+                                    <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+    
+                                    <select name="person" class="input-field">
+                                        <option value="1-service">Services</option>
+                                        <option value="2-service">Facials</option>
+                                        <option value="3-service">Nail Treatment</option>
+                                        <option value="4-service">Waxing</option> 
+                                        <option value="5-service">Skin care</option>
+                                        <option value="6-service">Pedicure</option>
+                                        <option value="7-service">Manicure</option>
+                                        <option value="8-service">Make Up</option>
+                                    </select>
+    
+                                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                                </div>
+    
+                                <div class="icon-wrapper">
+                                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+    
+                                    <select name="person" class="input-field">
+                                        <option value="07:00am">07 : 00am</option>
+                                        <option value="08:00am">08 : 00am</option>
+                                        <option value="09:00am">09 : 00am</option>
+                                        <option value="10:00am">10 : 00am</option>
+                                        <option value="11:00am">11 : 00am</option>
+                                        <option value="12:00am">12 : 00noon</option>
+                                        <option value="01:00pm">01 : 00pm</option>
+                                        <option value="02:00pm">02 : 00pm</option>
+                                        <option value="03:00pm">03 : 00pm</option>
+                                        <option value="04:00pm">04 : 00pm</option>
+                                        <option value="05:00pm">05 : 00pm</option>
+                                        <option value="06:00pm">06 : 00pm</option>
+                                        <option value="07:00pm">07 : 00pm</option>
+                                    </select>
+    
+                                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                                </div>
+                            </div>
+
+                            <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
+
+                            <button type="submit" class="btn btn-secondary">
+                                <span class="text text-1">Book our Services</span>
+
+                                <span class="text text-2" aria-hidden="true">Book our Services</span>
+                            </button>
+                            
+                        </form>
+
+                        <div class="form-right text-center" style="background-image: url('./assets/images/');">
+
+                            <h2 class="headline-1 text-center">Contact Us</h2>
+
+                            <p class="contact-label">Booking Request</p>
+
+                            <a href="tel:+254748959672" class="body-1 contact-number hover-underline"></a>
+
+                            <div class="separator"></div>
+
+                            <p class="contact-label">Location</p>
+
+                            <address class="body-4">
+                                Beauty Spa & Lounge, Westlands, <br>
+                                Nairobi, Kenya
+                            </address>
+
+                            <p class="contact-label">12 Hours</p>
+
+                            <p class="body-4">
+                                Monday to Saturday <br>
+                                07:00 am - 07:00pm
+                            </p>
+
+                            <p class="contact-label">Wedding and Braidal Party Grooming</p>
+
+                            <p class="body-4">
+                                Monday to Saturday <br>
+                                07:00 am - 07:00pm
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--
+                -# FEATURES
+            -->
+
+            <section class="section features text-center" aria-label="features" >
+                <div class="container">
+
+                    <p class="section-subtitle label-2">Why Choose Us</p>
+
+                    <h2 class="headline-1 section-title">Our Strength</h2>
+
+                    <ul class="grid-list">
+                        <li class="feature-item">
+                            <div class="feature-card">
+
+                                <div class="card-icon">
+                                    <img src="assets/images/producticon.png" width="100" height="80" loading="lazy" alt="icon">
+                                </div>
+
+                                <h3 class="title-2 card-title">Quality Products</h3>
+
+                                <div class="p label-1 card-text">All our products, are high quality products recognized world wide, and effective.</div>
+
+                            </div>
+                        </li>
+
+                        <li class="feature-item">
+                            <div class="feature-card">
+
+                                <div class="card-icon">
+                                    <img src="assets/images/massageicon.png" width="100" height="80" loading="lazy" alt="icon">
+                                </div>
+
+                                <h3 class="title-2 card-title">Quality Services</h3>
+
+                                <div class="p label-1 card-text">Megg offers quality services, from massages, to hairdressing including pedicure and Manicure.</div>
+
+                            </div>
+                        </li>
+
+                        <li class="feature-item">
+                            <div class="feature-card">
+
+                                <div class="card-icon">
+                                    <img src="assets/images/timeicon.png" width="100" height="80" loading="lazy" alt="icon">
+                                </div>
+
+                                <h3 class="title-2 card-title">We are Convinient</h3>
+
+                                <div class="p label-1 card-text">We offer services both from our physical locations and remotely to our clients.</div>
+
+                            </div>
+                        </li>
+
+                        <li class="feature-item">
+                            <div class="feature-card">
+
+                                <div class="card-icon">
+                                    <img src="assets/images/environmenticon.png" width="100" height="80" loading="lazy" alt="icon">
+                                </div>
+
+                                <h3 class="title-2 card-title">Beauttiful Environment</h3>
+
+                                <div class="p label-1 card-text">Megg Beauty Spa and Saloon, has been designed by professionals, in order to bring out a peaceful and relaxing attitude to our clients.</div>
+
+                            </div>
+                        </li>
+
+                        <li class="feature-item">
+                            <div class="feature-card">
+
+                                <div class="card-icon">
+                                    <img src="assets/images/celebrateicon.png" width="100" height="80" loading="lazy" alt="icon">
+                                </div>
+
+                                <h3 class="title-2 card-title">Events and Parties</h3>
+
+                                <div class="p label-1 card-text">Megg Beauty offers remote and onsite services for Bridal, Gala and other events.</div>
+
+                            </div>
+                        </li>
+                    </ul>
+
+                    <img src="./assets/images/" width="208" height="178" alt="shape" loading="lazy" class="shape shape-1" >
+
+                    <img src="./assets/images/" width="120" height="115" alt="shape" loading="lazy" class="shape shape-2" >
+
+
+                </div>
+            </section>
+
+
+            <!--
+                -# EVENTS
+            -->
+
+            <section class="event bg-black-10" aria-label="event">
+                <div class="container">
+
+                    <p class="section-subtitle label-2 text-center">Recent Updates</p>
+
+                    <h2 class="section-title headline-1 text-center">Upcoming Event</h2>
+
+                    <ul class="grid-list">
+                        <li>
+                            <div class="event-card has-before hover:shine">
+
+                                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                                    <img src="assets/images/eventimg.png" loading="lazy" alt="Get a taste of our skilled services" class="img-cover">
+
+                                    <time class="publish-date label-2" datetime="2023-08-24">24/08/2023</time>
+                                </div>
+
+                                <div class="card-content">
+                                    <p class="card-subtitle label-2 text-center">Trendy and Glamorous</p>
+
+                                    <h3 class="card-title title-2 text-center">
+                                        Keep you updated with the trending and glamorous hairstyles and products
+                                    </h3>   
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="event-card has-before hover:shine">
+
+                                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                                    <img src="assets/images/massage4.jpg" loading="lazy" alt="A day for some baby girl treatment" class="img-cover">
+
+                                    <time class="publish-date label-2" datetime="2023-08-30">30/08/2023</time>
+                                </div>
+
+                                <div class="card-content">
+                                    <p class="card-subtitle label-2 text-center">Girls day Out</p>
+
+                                    <h3 class="card-title title-2 text-center">
+                                        This party is a yearly party for all women to relax from work and house chores, where you get all our services with a 50% discount price. 
+                                        There's lots of food, drinks and other women to interact. 
+                                    </h3>   
+                                </div>
+                                
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="event-card has-before hover:shine">
+
+                                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                                    <img src="assets/images/charityevents.jpeg" loading="lazy" alt="A talk with the girls" class="img-cover">
+
+                                    <time class="publish-date label-2" datetime="2023-09-17">17/09/2023</time>
+                                </div>
+
+                                <div class="card-content">
+                                    <p class="card-subtitle label-2 text-center">A talk with the girls</p>
+
+                                    <h3 class="card-title title-2 text-center">
+                                       A talk with the girls, is a charity event, where we visit girl schools. Take gifts and sanitary assesories to our school girls,
+                                       get to listen to some of the challenges they face in schools and at home, and also offer guidance to them.
+                                    </h3>   
+                                </div>
+                                
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="btn btn-primary">
+                        <span class="text text-1">View Our Blog</span>
+
+                        <span class="text text-2" aria-hidden="true">View Our Blog</span>
+                    </a>
+
+                </div>
+            </section>
+
+
+
+            <!--
+                -#FOOTER
+            -->
+
+            <footer class="footer section has-bg-image text-center" style="background-image: url('./assets/images/');">
+            
+                <div class="container">
+
+                    <div class="footer-top grid-list">
+
+                        <div class="footer-brand has-before has-after">
+
+                            <a href="#" class="logo">
+                                <img src="assets/images/logoo.png" width="120" height="40" loading="lazy" alt="Megg Home">
+                            </a>
+
+                            <address class="body-4">
+                                Megg Beauty Spa & Lounge, Westlands, Nairobi City, Kenya.
+                            </address>
+
+                            <a href="mailto:booking@megg.com" class="body-4 contact-link">booking@megg.com</a>
+
+                            <a href="tel:+254748959672" class="body-4 contact-link">+254748959672</a>
+
+                            <p class="boby-4">
+                                Open : 07:00 am - 05:00 pm
+                            </p>
+
+                            <div class="wrapper">
+                                <div class="separator"></div>
+                                <div class="separator"></div>
+                                <div class="separator"></div>
+                            </div>
+
+                            <p class="title-1">Get News & Offers</p>
+
+                            <form action="" onsubmit="return false;" method="POST" name="submit-to-google-sheet" class="input-wrapper">
+                                <div class="icon-wrapper">
+                                    <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+                                    <input type="email" name="email_address" placeholder="Your email" autocomplete="off" class="input-field" required>
+                                </div>
+
+                                <button type="" onclick="document.getElementById('newsletterAlert').innerHTML = 'Thanks For Subscribing!' " class="btn btn-secondary">
+                                    <span class="text text-1">Subscribe</span>
+
+                                    <span class="text text-2" aria-hidden="true">Subscribe</span>
+                                </button>
+
+                            </form>
+
+                            <span id="newsletterAlert">
+                                
+                            </span>
+                        </div>
+
+                        <ul class="footer-list">
+
+                            <li>
+                                <a href="#" class="label-2 footer-link hover-underline">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="label-2 footer-link hover-underline">Services</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="label-2 footer-link hover-underline">Products</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="label-2 footer-link hover-underline">About Us</a>
+                            </li>
+
+                            <li>
+                                <a href="" class="label-2 footer-link hover-underline">Events</a>
+                            </li>
+                        </ul>
+
+                        <ul class="footer-list">
+
+                            <li>
+                                <a href="https://www.facebook.com/facebook/" class="label-2 footer-link hover-underline">
+                                    <img src="assets/images/icons/icons8-facebook-48.png" alt="" srcset="">
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.instagram.com/" class="label-2 footer-link hover-underline">
+                                    <img src="assets/images/icons/icons8-instagram-48.png" alt="" srcset="">
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://twitter.com/megg_spa" class="label-2 footer-link hover-underline">
+                                    <img src="assets/images/icons/icons8-twitter-48.png" alt="" srcset="">
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.youtube.com/@megbeauty8845/playlists" class="label-2 footer-link hover-underline">
+                                    <img src="assets/images/icons/icons8-youtube-48.png" alt="" srcset="">
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="googlemap.html" class="label-2 footer-link hover-underline">
+                                    <img src="assets/images/icons/icons8-google-maps-48.png" id="Google Map" alt="" srcset="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-bottom">
+
+                        <p class="copyright">
+                            &copy; 2022 Megg. All Rights Reserved | Crafted by <a href="#" target="_blank" class="link">Sweet Mageroh :)</a>
+                        </p>
+                    </div>
+
+                    
+                </div>
+            </footer>
+
+
+            <!--
+                -#BACK TO TOP
+            -->
+
+            <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+                <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+            </a>
+
+        </article>
+    </main>
+
+
+    <!--
+        Custom Javascript Link
+    -->
+    <script src="Js/Data.js"></script>
+    <script src="Js/script.js"></script>
+    <script src="Js/addToCart.js"></script>
+    <script src="Js/logout.js"></script>
+    <script src="Js/test.js"></script>
+
+
+
+
+    <!--
+        Icon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+</body>
+
+</html>
